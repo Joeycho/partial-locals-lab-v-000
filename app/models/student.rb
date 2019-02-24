@@ -18,7 +18,9 @@ class Student < ActiveRecord::Base
     if arg == ''
       self.all
     else
-      self.all.select { |stu| stu.name.include? arg  }find_by(name: arg)
+      self.all.select { |stu| stu.name.include? arg  }.map do |searched_stu|
+        searched_stu.name
+      end
     end
   end
 end
