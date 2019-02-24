@@ -1,9 +1,5 @@
-<h1>Student Search page</h1>
+<h1>Student Searched page</h1>
 
-<%= form_for @student do |f|%>
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-<%= f.submit %>
-</p>
+<% students.each do |stu|%>
+  <li><%=render :partial => "student", locals: {student: stu}%></li>
 <% end %>
