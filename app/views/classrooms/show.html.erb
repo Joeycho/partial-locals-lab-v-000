@@ -3,5 +3,5 @@ Classroom Info
 
 We now want to call out all students in the class:
 <%@classroom.students.each do |stu|%>
-<%=render partial: "students/student", locals: {post_student: stu}%>
+<%=render partial: "students/student", locals: {student: stu}%>
 <%end%>
