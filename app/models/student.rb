@@ -16,9 +16,9 @@ class Student < ActiveRecord::Base
 
   def self.search(arg)
     if arg == ''
-      self.class.all
+      self.all
     else
-      self.class.find_by(name: arg)
+      self.find_by(name: arg)
     end
   end
 end
