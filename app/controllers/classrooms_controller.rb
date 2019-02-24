@@ -3,7 +3,7 @@ class ClassroomsController < ApplicationController
     binding.pry
     @classroom = Classroom.find(params[:id])
     if @classroom
-      
+
     else
       errors.add(:classroom, "No such a classroom here")
     end
