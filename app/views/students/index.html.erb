@@ -1,0 +1,9 @@
+<h1>Student Search page</h1>
+
+<%= form_for @student do |f|%>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<%= f.submit %>
+</p>
+<% end %>
