@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
       self.all
     else
       binding.pry
-      self.all.select { |stu| stu.name.include? arg  }
+      self.all.select { |stu| stu.name.upcase.include? arg.upcase  }
     end
   end
 end
